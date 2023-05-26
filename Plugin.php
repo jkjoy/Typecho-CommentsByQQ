@@ -5,8 +5,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  * 
  * @package CommentsByQQ 
  * @author 作者Pxwei 修改imsun
- * @version 1.0.0
- * @link http://www.imsun.pw
+ * @version 1.0.1
+ * @link http://blog.asbid.cn
  */
 class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
 {
@@ -43,7 +43,7 @@ class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
     public static function config(Typecho_Widget_Helper_Form $form)
     {
         /** 分类名称 */
-        $name = new Typecho_Widget_Helper_Form_Element_Text('qq', NULL, '', _t('接收消息的QQ号「需添加qq机器人153985848为好友。」：'));
+        $name = new Typecho_Widget_Helper_Form_Element_Text('qq', NULL, '', _t('接收消息的QQ号「需添加qq机器人2280858259为好友。」：'));
         $form->addInput($name);
     }
     
