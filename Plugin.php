@@ -69,7 +69,7 @@ class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
 	 if($comment->ownerId==$comment->authorId)
 	 return 0;
 	 $ch = curl_init();
-	 curl_setopt($ch,CURLOPT_URL,"http://nas.sgcd.net:5700/send_private_msg?user_id=".$options->plugin('CommentsByQQ')->qq."&message=你有新的评论".$comment->permalink);
+	 curl_setopt($ch,CURLOPT_URL,"http://qq.asbid.cn/send_private_msg?user_id=".$options->plugin('CommentsByQQ')->qq."&message=你有新的评论".$comment->permalink);
 	 curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 	 curl_setopt($ch,CURLOPT_HEADER,0);
 	 curl_exec($ch);
