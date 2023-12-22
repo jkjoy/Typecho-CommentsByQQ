@@ -1,12 +1,14 @@
 <?php
-if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /**
- * 博客评论通过QQ机器人发送到QQ 使用默认API需添加QQ 2280858259 为好友 才能正常接收通知 #修改 by imsun
+ * 博客评论通过QQ机器人发送到QQ 使用默认API需添加QQ 2280858259 为好友 才能正常接收通知
  *
  * @package CommentsByQQ
- * @version 1.0.2
+ * @author 老孙
+ * @version 1.0.3
  * @link https://blog.asbid.cn/
  */
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+
 class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
 {
     /**
@@ -44,7 +46,7 @@ class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
      */
     public static function config(Typecho_Widget_Helper_Form $form)
     {
-        $default_url = 'http://bot.asbid.cn';
+        $default_url = 'http://bot.0tz.top';
         if (defined('__TYPECHO_COMMENT_BY_QQ_API_URL__')) {
             $default_url = __TYPECHO_COMMENT_BY_QQ_API_URL__;
         }
@@ -99,7 +101,7 @@ class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
 			return;
 		}
       
-        $msg = '你有新的评论：「' . $comment->author . '」在文章《' . $comment->title . '》中发表了评论！';
+        $msg = '你有新的评论：\n「' . $comment->author . '」在文章《' . $comment->title . '》中发表了评论！';
         $msg .= "\n评论内容:\n {$comment->text}\n永久链接地址：{$comment->permalink}";
 
         $_message_data_ = array(
