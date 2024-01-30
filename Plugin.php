@@ -46,7 +46,7 @@ class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
      */
     public static function config(Typecho_Widget_Helper_Form $form)
     {
-        $default_url = 'http://bot.0tz.top';
+        $default_url = 'https://bot.asbid.cn';
         if (defined('__TYPECHO_COMMENT_BY_QQ_API_URL__')) {
             $default_url = __TYPECHO_COMMENT_BY_QQ_API_URL__;
         }
