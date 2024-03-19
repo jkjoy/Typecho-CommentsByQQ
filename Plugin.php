@@ -5,7 +5,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  *
  * @package CommentsByQQ
  * @author 老孙
- * @version 1.0.4
+ * @version 1.0.5
  * @link https://blog.asbid.cn/
  */
 class CommentsByQQ_Plugin implements Typecho_Plugin_Interface
