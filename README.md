@@ -10,3 +10,4 @@
 ## QQ机器人项目
 `Mrs4s/go-cqhttp`
  
+仅支持php8.0以下
